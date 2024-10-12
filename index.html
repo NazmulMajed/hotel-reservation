@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Hotel Reservation</title>
+</head>
+
+<body class="bg-white ">
+    <!-- header start  -->
+    <header class="w-full shadow-md bg-white">
+        <div class="navbar flex items-center justify-between container mx-auto ">
+
+            <!-- Navbar Start (Left Side - Logo) -->
+            <div class="navbar-start flex items-center">
+                <!-- Mobile Dropdown (Hamburger Icon) for Small Screens -->
+                <div class="dropdown lg:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li class="text-black text-base font-bold font-['Urbanist']"><a>Home</a></li>
+                        <li><a class="text-black text-base font-bold font-['Urbanist']">About</a></li>
+                        <li><a class="text-black text-base font-bold font-['Urbanist']">Rooms</a></li>
+                        <li><a class="text-black text-base font-bold font-['Urbanist']">Blog</a></li>
+                        <li><a class="text-black text-base font-bold font-['Urbanist']">Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Logo on the Left -->
+                <a href="index1.html" class="ml-2 lg:ml-0">
+                    <img class="w-28 lg:w-44 h-20" src="asset/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Navbar Center for Desktop (Hidden on Mobile) -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="hover:text-black">Home</a></li>
+                    <li><a class="hover:text-black">About</a></li>
+                    <li><a class="hover:text-black">Rooms</a></li>
+                    <li><a class="hover:text-black">Blog</a></li>
+                    <li><a class="hover:text-black">Page</a></li>
+                </ul>
+            </div>
+
+            <!-- Navbar End (Right Side - Login/Signup & Reservation Button) -->
+            <div class="navbar-end flex items-center gap-4">
+                <!-- Login/Signup Links (Hidden on Mobile) -->
+                <div class="flex items-center">
+                    <a class="hover:text-blue-600 hover:font-semibold text-sm lg:text-base" href="login">login</a>
+                    <p class="hidden lg:block mx-1">/</p>
+                    <a class="hover:text-blue-600 hover:font-semibold text-sm lg:text-base" href="signup">signup</a>
+                </div>
+
+                <!-- Reservation Button -->
+                <a class="btn w-28 lg:w-32 h-10 lg:h-12 bg-[#ceaf83] rounded-full border-none text-white text-sm lg:text-base"
+                    href="/index1.html">Reservation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- header end  -->
+    <div class="container mx-auto mt-24">
+        <div class="hero min-h-screen relative">
+            <div class="hero-content flex-col lg:flex-row-reverse gap-10 shadow">
+
+                <div class="relative w-full lg:w-1/2 rounded-[30px]">
+                    
+                    <img class="absolute w-[123px] h-[123px] rounded-full top-[-58px] left-[-48px]" src="asset/Ellipse 2061.png" alt="">
+                    <img class="rounded-[30px] w-full" src="asset/Frame 111111.png"  alt="Hotel Image" />
+                    <img class="absolute right-[-61px] top-[50%] rounded-full h-[123px] w-[123px] " src="asset/Ellipse 2062.png" alt="">
+                </div>
+    
+                <div class="text-black w-full lg:w-1/2">
+                    
+                    <div class="relative">
+                        <img class="absolute right-[31px] top-[-57px]" src="asset/Frame-1.png" alt="">
+                        <img class="z-[-1] absolute bottom-0 right-0" src="asset/Vector.svg" alt="">
+                        <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+                            Find the top<br> Hotels nearby.
+                        </h1>
+                    </div>
+                    <p class="py-6 text-lg lg:text-xl">
+                        Looking for a comfortable and convenient place to call home? Our hotel offers spacious rooms, modern amenities, and a prime location for a great experience.
+                    </p>
+    
+                    <ul class="flex my-10 justify-between">
+                        <li><a href="#" class="text-[#ceaf83] hover:underline">Vila</a></li>
+                        <li><a href="#" class="text-[#ceaf83] hover:underline">Family House</a></li>
+                        <li><a href="#" class="text-[#ceaf83] hover:underline">Hotel</a></li>
+                        <li><a href="#" class="text-[#ceaf83] hover:underline">Room</a></li>
+                    </ul>
+    
+                    <div class="flex gap-10 mb-6">
+                        <a class="btn w-32 lg:w-40 h-12 bg-[#ceaf83] rounded-full border-none text-white hover:bg-[#b18a65]" href="/index1.html">Discover now</a>
+                        <button class="flex gap-2 items-center hover:text-[#ceaf83]">
+                            <img class="w-14 h-14" src="asset/Ellipse 2060.png" alt="Play icon" />
+                            <span class="text-lg">Watch our story</span>
+                        </button>
+                    </div>
+    
+                    <h3 class="text-lg lg:text-xl font-semibold text-black">Check Availability</h3>
+    
+                    <!-- Stat Cards -->
+                    <div class="lg:stats shadow-md bg-white rounded-full py-2 items-center gap-4 lg:gap-8 flex-none lg:flex absolute ">
+                        <div class="stat gap-2">
+                            <div class="stat-title text-black">Check In</div>
+                            <div class="stat-desc text-gray-500">Add dates</div>
+                        </div>
+    
+                        <div class="stat gap-2">
+                            <div class="stat-title text-black">Check Out</div>
+                            <div class="stat-desc text-gray-500">Add dates</div>
+                        </div>
+    
+                        <div class="stat gap-2">
+                            <div class="stat-title text-black">Adults</div>
+                            <div class="stat-desc text-gray-500">Add adults</div>
+                        </div>
+    
+                        <div class="stat gap-2">
+                            <div class="stat-title text-black">Children</div>
+                            <div class="stat-desc text-gray-500">Add children</div>
+                        </div>
+    
+                        <div class="stat gap-2">
+                            <div class="stat-title text-black">Rooms</div>
+                            <div class="stat-desc text-gray-500">Add rooms</div>
+                        </div>
+    
+                        <!-- Search Icon in the Center -->
+                        <div class="stat">
+                            <div class="stat-figure text-secondary">
+                                <div class="w-[100px] h-[100px] flex justify-center items-center rounded-full bg-gray-100">
+                                    <img class="w-[60px] h-[60px]" src="asset/Search.svg" alt="Search" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+  <div style="background-image: 'url(asset/bg12222.png)';">
+      <!--start feature-->
+      <div class="feature-section">
+        <div class="container mx-auto py-12 bg-white">
+            <!-- Feature Section Start -->
+            <!-- Paragraphs Section -->
+            <div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4 px-4 mb-10">
+                <!-- First Paragraph -->
+                <p class="text-black text-2xl font-bold sm:w-1/2">
+                    Discover Homeya's Finest Properties For <br>Your Dream Home
+                </p>
+                <!-- Second Paragraph -->
+                <p class=" text-black text-sm sm:w-1/2">
+                    All three of Rooms Hotels locations are restorations that translate historic locations into places of contemporary comfort. Industrial architecture, salvaged building materials, and the unique approach.
+                </p>
+            </div>
+    
+            <!-- Cards Section -->
+            <div class="container mx-auto px-4 py-10">
+                <!-- First row with 2 cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <!-- Card 1 -->
+                    <div class="relative bg-cover bg-center w-full h-[458px] rounded-[10px] overflow-hidden"
+                        style="background-image: url('asset/RECTANGE 2777788.png');">
+                        <!-- Price Tag -->
+                        <div
+                            class="absolute top-4 right-4 bg-white text-[#ceaf83] font-bold px-4 py-2 rounded-md text-sm sm:text-base">
+                            $62.00/Day
+                        </div>
+                        <!-- Room Title -->
+                        <div class="absolute bottom-12 left-4 text-white font-bold text-lg">
+                            Deluxe Double Rooms
+                        </div>
+                        <!-- Room Details -->
+                        <div class="absolute bottom-4 left-4 flex gap-2 mt-2">
+                            <p class="text-white">500 sq ft</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">3-4 guests</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">Free Wi-Fi</p>
+                        </div>
+                    </div>
+    
+                    <!-- Card 2 -->
+                    <div class="relative bg-cover bg-center w-full h-[458px] rounded-[10px] overflow-hidden"
+                        style="background-image: url('asset/RECTANGE 277777.png');">
+                        <!-- Price Tag -->
+                        <div
+                            class="absolute top-4 right-4 bg-white text-[#ceaf83] font-bold px-4 py-2 rounded-md text-sm sm:text-base">
+                            $62.00/Day
+                        </div>
+                        <!-- Room Title -->
+                        <div class="absolute bottom-12 left-4 text-white font-bold text-lg">
+                            Deluxe Double Rooms
+                        </div>
+                        <!-- Room Details -->
+                        <div class="absolute bottom-4 left-4 flex gap-2 mt-2">
+                            <p class="text-white">500 sq ft</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">3-4 guests</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">Free Wi-Fi</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Second row with 3 cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <!-- Card 3 -->
+                    <div class="relative bg-cover bg-center w-full h-[458px] rounded-[10px] overflow-hidden"
+                        style="background-image: url('asset/RECTANGE 2777799.png');">
+                        <!-- Price Tag -->
+                        <div
+                            class="absolute top-4 right-4 bg-white text-[#ceaf83] font-bold px-4 py-2 rounded-md text-sm sm:text-base">
+                            $62.00/Day
+                        </div>
+                        <!-- Room Title -->
+                        <div class="absolute bottom-12 left-4 text-white font-bold text-lg">
+                            Hill View Suite
+                        </div>
+                        <!-- Room Details -->
+                        <div class="absolute bottom-4 left-4 flex gap-2 mt-2">
+                            <p class="text-white">500 sq ft</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">3-4 guests</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">Free Wi-Fi</p>
+                        </div>
+                    </div>
+    
+                    <!-- Card 4 -->
+                    <div class="relative bg-cover bg-center w-full h-[458px] rounded-[10px] overflow-hidden"
+                        style="background-image: url('asset/RECTANGE 277744.png');">
+                        <!-- Price Tag -->
+                        <div
+                            class="absolute top-4 right-4 bg-white text-[#ceaf83] font-bold px-4 py-2 rounded-md text-sm sm:text-base">
+                            $62.00/Day
+                        </div>
+                        <!-- Room Title -->
+                        <div class="absolute bottom-12 left-4 text-white font-bold text-lg">
+                            Hill View Suite
+                        </div>
+                        <!-- Room Details -->
+                        <div class="absolute bottom-4 left-4 flex gap-2 mt-2">
+                            <p class="text-white">500 sq ft</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">3-4 guests</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">Free Wi-Fi</p>
+                        </div>
+                    </div>
+    
+                    <!-- Card 5 -->
+                    <div class="relative bg-cover bg-center w-full h-[458px] rounded-[10px] overflow-hidden"
+                        style="background-image: url('asset/RECTANGE 277755.png');">
+                        <!-- Price Tag -->
+                        <div
+                            class="absolute top-4 right-4 bg-white text-[#ceaf83] font-bold px-4 py-2 rounded-md text-sm sm:text-base">
+                            $62.00/Day
+                        </div>
+                        <!-- Room Title -->
+                        <div class="absolute bottom-12 left-4 text-white font-bold text-lg">
+                            Hill View Suite
+                        </div>  
+                        <!-- Room Details -->
+                        <div class="absolute bottom-4 left-4 flex gap-2 mt-2">
+                            <p class="text-white">500 sq ft</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">3-4 guests</p>
+                            <p class="text-white">|</p>
+                            <p class="text-white">Free Wi-Fi</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- View All Button -->
+                <div class="flex justify-center mt-8">
+                    <div>
+                        <img src="asset/arrow_drop_down.png" alt="">
+                    </div>
+                    <a href="/index1..html"
+                        class="btn w-32 h-12 bg-[#ceaf83] text-white font-semibold rounded-full flex items-center justify-center hover:bg-orange-600 border-none">
+                        View All
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="w-full bg-pink-100">
+        <div class="flex w-full gap-[20px] justify-between">
+            <!-- Left Side -->
+            <div class="bg-black text-white w-full p-6">
+                <h2 class="flex items-center text-3xl font-bold mb-4">Rave Reviews from Our Satisfied Guests</h2>
+                <div class="flex items-center justify-center">
+                    <button class="bg-[#e7e7d3] text-white rounded-lg px-4 py-2 mr-2">←</button>
+                    <div class="w-2 h-2 bg-white rounded-full mx-1"></div>
+                    <button class="bg-[#ceaf83] text-white rounded-lg px-4 py-2">→</button>
+                </div>
+            </div>
+    
+            <!-- Right Side -->
+            <div class="bg-pink-100 w-full p-4 flex justify-between gap-[20px]">
+                <!-- Review Card 1 -->
+                <div class="bg-white rounded-lg p-4 mb-4 w-full md:w-1/2">
+                    <div class="flex items-center mt-4">
+                        <img src="asset/Rectangle 952.png" alt="Profile 1" class="w-10 h-10 rounded-full mr-2" />
+                        <div>
+                            <p class="font-semibold">John Doe</p>
+                            <p>Webflow Developer</p>
+                           
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mt-4">"This place is amazing! The ambiance and service were top-notch."</p>
+                    <div class="flex items-center mt-1">
+                        <!-- Stars (you can replace with your star icons) -->
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-gray-400">☆</span>
+                    </div>
+                </div>
+            
+                <!-- Review Card 2 -->
+                <div class="bg-white rounded-lg p-4 mb-4 w-full md:w-1/2">
+                    <div class="flex items-center mt-4">
+                        <img src="asset/Rectangle 952-1.png" alt="Profile 2" class="w-10 h-10 rounded-full mr-2" />
+                        <div>
+                            <p class="font-semibold">Jane Smith</p>
+                           <p>Webflow Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mt-4">"A delightful stay! The staff was incredibly friendly and accommodating."</p>
+                    <div class="flex items-center mt-1">
+                        <!-- Stars (you can replace with your star icons) -->
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-yellow-500">★</span>
+                        <span class="text-gray-400">☆</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+    
+    <div class="bg-[#EBEBEB] py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1: Logo and Social Media Links -->
+                <div class="flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <img src="asset/logo.png" alt="Logo" class="h-12 mr-2" />
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <img src="asset/Frame 1618873516.png" alt="">
+                    
+                    </div>
+                </div>
+    
+                <!-- Column 2: Quick Links -->
+                <div class="flex flex-col">
+                    <h3 class="font-bold mb-2">Quick Links</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="text-gray-600">About Us</a></li>
+                        <li><a href="#" class="text-gray-600">Our Services</a></li>
+                        <li><a href="#" class="text-gray-600">Our Blogs</a></li>
+                        <li><a href="#" class="text-gray-600">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 3: Services -->
+                <div class="flex flex-col">
+                    <h3 class="font-bold mb-2">Our Services</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="text-gray-600">Appointment</a></li>
+                        <li><a href="#" class="text-gray-600">Web Design and Development</a></li>
+                        <li><a href="#" class="text-gray-600">UI/UX Services</a></li>
+                        <li><a href="#" class="text-gray-600">Digital Marketing</a></li>
+                        <li><a href="#" class="text-gray-600">Custom Web Design</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 4: Contact Information -->
+                <div class="flex flex-col">
+                    <h3 class="font-bold mb-2">Contact</h3>
+                    <p class="text-gray-600 flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18" />
+                        </svg>
+                        hunkcyAgencyUI@gamil.com
+                    </p>
+                    <p class="text-gray-600 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12V3m0 0l9 9m-9-9l-9 9m0 0h18" />
+                        </svg>
+                        302/1, Hazi Tower, Gandaria New Rd, Dhaka 1204
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-black text-white py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left">
+                <p>©2024 Bookky | All Rights Reserved.</p>
+            </div>
+            <div class="mt-2 md:mt-0 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    
+
+
+</body>
+
+</html>
